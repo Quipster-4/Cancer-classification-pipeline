@@ -22,25 +22,51 @@ This project is optimized for **Google Colab**. Due to the large size of the dat
 
 ---
 
-## 📊 Project Overview
+📊 Project Overview (Updated Objectives)
 
-This project demonstrates the use of Big Data technologies to handle high-dimensional genomic data.
+Key Objectives:
 
-**Key Objectives:**
-* Process large-scale genomic datasets using Spark DataFrames.
-* Perform feature engineering and dimensionality reduction.
-* Train a multi-class classification model to identify cancer types.
+ - Process large-scale genomic datasets using Spark DataFrames.
 
-### 🛠️ The Pipeline
+ - Perform feature engineering and dimensionality reduction.
 
-1.  **Data Ingestion:** Loading massive CSV datasets into Spark.
-2.  **Preprocessing:** Handling missing values and string indexing labels.
-3.  **Feature Engineering:**
-    * **VectorAssembler:** Combining features into vector columns.
-    * **StandardScaler:** Normalizing gene expression levels.
-    * **PCA (Principal Component Analysis):** Reducing dimensionality to improve model performance and training speed.
-4.  **Modeling:** Training a **Random Forest Classifier**.
-5.  **Evaluation:** Measuring performance using Accuracy, Precision, and Recall.
+ - Optimize model performance using Cross-Validation and Grid Search.
+
+ - Implement Ensemble Learning techniques to combine weak learners into a robust       predictor.
+
+ --- 
+
+🛠️ The Pipeline
+
+1. Data Ingestion: Loading massive CSV datasets into Spark.
+
+2. Preprocessing: Handling missing values and string indexing labels.
+
+3. Feature Engineering:
+
+ - VectorAssembler: Combining features into vector columns.
+
+ - StandardScaler: Normalizing gene expression levels.
+
+ - PCA (Principal Component Analysis): Reducing dimensionality to improve model performance and training speed.
+
+4. Modeling & Optimization:
+
+ - Multi-Model Training: Training Random Forest, Support Vector Machine (SVM), and Logistic Regression classifiers.
+
+ - Hyperparameter Tuning: Using Cross-Validation (3-fold) to automatically find the best tree depth and count for the Random Forest model.
+
+5. Ensemble Learning:
+
+ - Implementing a Voting Classifier to combine predictions from all three models.
+
+ - Using a custom Spark UDF to calculate the majority vote for robust final predictions.
+
+6. Evaluation: Measuring and comparing performance (Accuracy) between individual models and the Ensemble.
+
+---
+
+"Due to computational constraints, hyperparameter tuning was restricted to a lightweight grid (1-5 trees). While this successfully demonstrated the automated tuning pipeline, the resulting model was underfitted. With more compute resources, increasing the tree count to 100+ would significantly improve accuracy."
 
 ---
 
