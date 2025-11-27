@@ -1,1 +1,0 @@
-{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1764265122693,"sparkVersion":"3.5.1","uid":"StringIndexer_f625ae707578","paramMap":{"outputCol":"label","inputCol":"cancer_label"},"defaultParamMap":{"handleInvalid":"error","outputCol":"StringIndexer_f625ae707578__output","stringOrderType":"frequencyDesc"}}
