@@ -1,0 +1,12 @@
+
+# Ignore Colab-specific directories and files
+.config/
+drive/
+sample_data/
+.ipynb_checkpoints/
+
+# Ignore generated output directories
+cancer_predictions/
+random_forest_cancer_model/
+# pima-indians-diabetes.data.csv # If you want to ignore downloaded datasets
+tcga_data/
